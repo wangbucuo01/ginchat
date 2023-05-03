@@ -1,0 +1,195 @@
+info:
+  contact: {}
+  license: {}
+paths:
+  /community/create:
+    post:
+      parameters:
+      - description: ownerId
+        in: formData
+        name: ownerId
+        type: string
+      - description: name
+        in: formData
+        name: name
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 创建群聊
+      tags:
+      - 群聊模块
+  /community/join:
+    post:
+      parameters:
+      - description: userId
+        in: formData
+        name: userId
+        type: string
+      - description: comName
+        in: formData
+        name: comName
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 加入群聊
+      tags:
+      - 群聊模块
+  /community/load:
+    post:
+      parameters:
+      - description: ownerId
+        in: formData
+        name: ownerId
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 加载群聊
+      tags:
+      - 群聊模块
+  /friend/find:
+    post:
+      parameters:
+      - description: userId
+        in: formData
+        name: userId
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 查找用户
+      tags:
+      - 朋友模块
+  /friends/search:
+    post:
+      parameters:
+      - description: userId
+        in: formData
+        name: userId
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 查找所有朋友
+      tags:
+      - 朋友模块
+  /index:
+    get:
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - 首页
+  /user/create:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: name
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      - description: 确认密码
+        in: formData
+        name: repassword
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 新增用户
+      tags:
+      - 用户模块
+  /user/delete:
+    get:
+      parameters:
+      - description: id
+        in: query
+        name: id
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 删除用户
+      tags:
+      - 用户模块
+  /user/list:
+    get:
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 所有用户
+      tags:
+      - 用户模块
+  /user/login:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: name
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 登录
+      tags:
+      - 用户模块
+  /user/update:
+    post:
+      parameters:
+      - description: id
+        in: formData
+        name: id
+        type: string
+      - description: name
+        in: formData
+        name: name
+        type: string
+      - description: password
+        in: formData
+        name: password
+        type: string
+      - description: phone
+        in: formData
+        name: phone
+        type: string
+      - description: email
+        in: formData
+        name: email
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 修改用户
+      tags:
+      - 用户模块
+swagger: "2.0"
